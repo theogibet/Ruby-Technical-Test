@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    include  AssosHelper
     before_action :logged_in_user, only: [:show]
     def show
         @user = User.find(params[:id])
@@ -9,6 +10,11 @@ class UsersController < ApplicationController
     end
     
     def create
+        if get_rna_asso_by_official_id(user_params["identifiant"]) === nil
+            flash[:danger] = "Merci de vérifier votre identifiant officiel."
+            redirect_to signup_url
+            return
+        end
         @user = User.new(user_params)
         if @user.save
             log_in @user

@@ -1,0 +1,28 @@
+{
+    "Grand Paris": {
+        "Paris": {
+            "type": "department",
+            "name": "Paris",
+            "postal_codes": [75001, 75002, 75003, 75004, 75005],
+            "paris_intramuros": {
+                "paris-1er-arr": {
+                    "type": "surrounding",
+                    "name": "Paris 1er arr",
+                    "postal_codes": 75001
+                },
+                "paris-2e-arr": {
+                    "type": "surrounding",
+                    "name": "Paris 2e arr.",
+                    "postal_codes": 75002
+                }
+            },
+            "petite-couronne:": {
+                "type": "surrounding",
+                "name": "Petite couronne",
+                "postal_codes": [93300, 93170, 92100, "[...]"]
+            }
+        }
+    }
+}
+
+
